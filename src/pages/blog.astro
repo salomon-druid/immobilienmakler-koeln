@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import BlogPostList from '@/components/BlogPostList.astro';
+---
+<Layout title="Blog">
+  <Header activePage="blog" />
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <section class="mb-16">
+      <h1 class="text-3xl font-bold text-gray-900 text-center mb-6">
+        Unser Blog
+      </p>
+      <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto">
+        Aktuelle Nachrichten, Tipps und Einblicke zum Immobilienmarkt in Köln und Umgebung.
+      </p>
+    </section>
+    <BlogPostList />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Page-specific styles if needed */
+</style>

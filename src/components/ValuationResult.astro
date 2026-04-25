@@ -1,0 +1,75 @@
+---
+// This component would normally receive data from a backend or state management
+// For this static demo, we'll show placeholder data or expect props
+export interface Props {
+  estimatedValue: number;
+  confidence: number; // 0-100
+  rangeLow: number;
+  rangeHigh: number;
+  comparableCount: number;
+  marketTrend: string;
+}
+const { estimatedValue, confidence, rangeLow, rangeHigh, comparableCount, marketTrend } = Astro.props;
+---
+<section class="bg-white rounded-xl shadow-xl p-8">
+  <div class="space-y-6">
+    <div class="text-center">
+      <div class="inline-block w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 1118 0z"/></svg>
+      </div>
+      <p class="text-2xl font-bold text-indigo-600">
+        {estimatedValue.toLocaleString('de-DE')} €
+      </p>
+      <p class="text-sm text-gray-500">
+        Schätzwert mit {confidence}% Sicherheit
+      </p>
+    </div>
+    
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="text-sm text-gray-600">
+        <span class="font-medium">Preisspanne:</span>
+        <span class="ml-2">{rangeLow.toLocaleString('de-DE')} € – {rangeHigh.toLocaleString('de-DE')} €</span>
+      </div>
+      <div class="text-sm text-gray-600">
+        <span class="font-medium">Vergleichsobjekte:</span>
+        <span class="ml-2>{comparableCount}</span>
+      </div>
+      <div class="text-sm text-gray-600">
+        <span class="font-medium">Markttrend:</span>
+        <span class="ml-2">{marketTrend}</span>
+      </div>
+      <div class="text-sm text-gray-600">
+        <span class="font-medium">Bewertungsdatum:</span>
+        <span class="ml-2">{new Date().toLocaleDateString('de-DE')}</span>
+      </div>
+    </div>
+    
+    <div class="mt-6 pt-4 border-t border-gray-200">
+      <h3 class="text-lg font-bold text-gray-900 mb-4">Was beeinflusst den Wert?</h3>
+      <div class="space-y-3 text-sm text-gray-600">
+        <p>• Lage und Stadtteil in Köln</p>
+        <p>• Baujahr und Zustand der Immobilie</p>
+        <p>• Wohnfläche und Grundstücksgröße</p>
+        <p>• Ausstattung und Modernisierungsstand</p>
+        <p>• Aktuelle Nachfrage und Angebotssituation</p>
+        <p>• Vergleichbare Verkäufe der letzten 3 Monate</p>
+      </div>
+    </div>
+    
+    <div class="mt-8">
+      <a href="/kontakt" 
+         class="btn-primary w-full px-6 py-3 text-sm font-medium rounded-lg hover:bg-indigo-700">
+        Jetzt Beratung vereinbaren
+      </a>
+      <p class="mt-4 text-sm text-gray-500 text-center">
+        Oder teilen Sie diese Bewertung mit Freunden und Familie
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .btn-primary {
+    @apply bg-indigo-600 text-white;
+  }
+</style>

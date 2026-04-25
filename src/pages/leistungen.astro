@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ServiceDetails from '@/components/ServiceDetails.astro';
+import ProcessSection from '@/components/ProcessSection.astro';
+import FAQSection from '@/components/FAQSection.astro';
+---
+<Layout title="Leistungen">
+  <Header activePage="leistungen" />
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <section class="mb-16">
+      <h1 class="text-3xl font-bold text-gray-900 text-center mb-6">
+        Unsere Leistungen
+      </p>
+      <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto">
+        Vollständiger Service rund um Ihre Immobilie - von der Bewertung über die Vermarktung bis zum erfolgreichen Abschluss.
+      </p>
+    </section>
+    <ServiceDetails />
+    <ProcessSection />
+    <FAQSection />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Page-specific styles if needed */
+</style>

@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import TeamSection from '@/components/TeamSection.astro';
+import ValuesSection from '@/components/ValuesSection.astro';
+import HistorySection from '@/components/HistorySection.astro';
+---
+<Layout title="Über uns">
+  <Header activePage="ueber-uns" />
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <section class="mb-16">
+      <h1 class="text-3xl font-bold text-gray-900 text-center mb-6">
+        Über Uns
+      </p>
+      <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto">
+        Wir sind ein junges, dynamisches Team von Immobilienexperten, das lokale Marktkenntnis mit technologischer Innovation verbindet.
+      </p>
+    </section>
+    <HistorySection />
+    <ValuesSection />
+    <TeamSection />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Page-specific styles if needed */
+</style>
