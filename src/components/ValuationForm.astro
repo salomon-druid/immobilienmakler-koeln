@@ -47,7 +47,7 @@ const { loading = false, result } = Astro.props;
           Schätzwert mit {result.confidence}% Sicherheit
         </p>
         <div class="mt-4 flex justify-center space-x-4 text-sm text-gray-600">
-          <span>Spanne: {result.rangeLow.toLocaleString('de-DE')} € – {result.rangeHigh.toLocaleString('de-DE')} €</span>
+          <span>Spanne: {result.rangeLow.toLocaleString('de-DE')} € - {result.rangeHigh.toLocaleString('de-DE')} €</span>
           <span>|</span>
           <span>Basierend auf {result.comparableCount} Vergleichsobjekten</span>
         </div>

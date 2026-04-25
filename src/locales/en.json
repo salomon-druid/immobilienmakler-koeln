@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "Home",
+    "bewertung": "Property Valuation",
+    "leistungen": "Services",
+    "ueber-uns": "About Us",
+    "blog": "Blog",
+    "kontakt": "Contact"
+  },
+  "hero": {
+    "title": "Your trusted real estate agent in Cologne",
+    "subtitle": "Precise valuations, successful sales and personal advice all in one place",
+    "ctaPrimary": "Free Valuation",
+    "ctaSecondary": "Our Services"
+  },
+  "bewertung": {
+    "title": "Professional property valuation in Cologne",
+    "subtitle": "Receive a well-founded market price estimate for your property within 60 seconds. Our AI-powered tool analyses current market data, comparable properties and local characteristics.",
+    "formTitle": "Property Details",
+    "street": "Street and house number",
+    "houseNumber": "House number (if separate)",
+    "plz": "Postal code",
+    "ort": "City",
+    "immotyp": "Property type",
+    "baujahr": "Year of construction",
+    "zimmer": "Number of rooms",
+    "schlafzimmer": "Bedrooms",
+    "flaeche": "Living area (m²)",
+    "grundstueck": "Land area (m²)",
+    "zustand": "Condition",
+    "ausstattung": "Features (multiple selectable)",
+    "balkon": "Balcony / Terrace",
+    "garten": "Garden",
+    "keller": "Basement",
+    "aufzug": "Elevator",
+    "einbaukueche": "Fitted kitchen",
+    "datenschutz": "I have read the privacy policy and agree to it.",
+    "submit": "Get free valuation",
+    "loading": "Calculating...",
+    "resultTitle": "Your valuation results",
+    "estimatedValue": "Estimated value",
+    "confidence": "Confidence",
+    "range": "Price range",
+    "comparableCount": "Comparable properties",
+    "marketTrend": "Market trend",
+    "consultation": "Schedule consultation now"
+  },
+  "leistungen": {
+    "title": "Our Services",
+    "subtitle": "Full service around your property - from valuation through marketing to successful completion.",
+    "serviceDetails": {
+      "title": "Our core services",
+      "items": [
+        {
+          "title": "Property valuation",
+          "description": "Professional market price determination with AI support for residential and commercial properties in Cologne and the surrounding area."
+        },
+        {
+          "title": "Property marketing",
+          "description": "Strategic marketing with professional exposés, target group approach and negotiation leadership."
+        },
+        {
+          "title": "Financing advice",
+          "description": "Support in financing planning and mediation to trustworthy financial partners."
+        },
+        {
+          "title": "Legal accompaniment",
+          "description": "Support with all legal aspects of the property purchase and sale."
+        }
+      ]
+    }
+  },
+  "ueber-uns": {
+    "title": "About Us",
+    "subtitle": "We are a young, dynamic team of real estate experts who combine local market knowledge with technological innovation."
+  },
+  "blog": {
+    "title": "Our Blog",
+    "subtitle": "Current news, tips and insights on the Cologne real estate market and surroundings."
+  },
+  "kontakt": {
+    "title": "Contact us",
+    "subtitle": "We look forward to your inquiry. Whether you would like to have a property valued, have questions about selling or need advice - we are here for you.",
+    "formTitle": "Send message",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "subject": "Subject",
+    "message": "Message",
+    "privacy": "I have read the privacy policy and agree to it.",
+    "submit": "Send message",
+    "officeTitle": "Our office",
+    "address": "Musterstraße 123\n50667 Cologne",
+    "phone": "Phone",
+    "email": "Email",
+    "openingHours": "Opening hours",
+    "hours": "Mo-Fr: 9:00 - 18:00\nSa: 10:00 - 14:00"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "imprint": "Imprint",
+    "copyright": "© {year} Immobilienmakler Cologne. All rights reserved."
+  }
+}

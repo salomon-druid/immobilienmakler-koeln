@@ -17,9 +17,47 @@ import FAQSection from '@/components/FAQSection.astro';
         Vollständiger Service rund um Ihre Immobilie - von der Bewertung über die Vermarktung bis zum erfolgreichen Abschluss.
       </p>
     </section>
-    <ServiceDetails />
+    <ServiceDetails 
+      items={[
+        {
+          title: "Immobilienbewertung",
+          description: "Professionelle Marktpreisermittlung mit KI-Unterstützung für Wohn- und Gewerbeimmobilien in Köln und Umgebung."
+        },
+        {
+          title: "Immobilienvermarktung",
+          description: "Strategische Vermarktung mit professionellen Exposés, Zielgruppenansprache und Verhandlungsführung."
+        },
+        {
+          title: "Finanzierungsberatung",
+          description: "Unterstützung bei der Finanzierungsplanung und Vermittlung zu vertrauenswürdigen Finanzpartnern."
+        },
+        {
+          title: "Rechtliche Begleitung",
+          description: "Unterstützung bei allen rechtlichen Aspekten des Immobilienkaufs und -verkaufs."
+        }
+      ]} 
+    />
     <ProcessSection />
-    <FAQSection />
+    <FAQSection 
+      items={[
+        {
+          question: "Wie lange dauert eine Immobilienbewertung?",
+          answer: "Unsere Online-Bewertung liefert Ihnen innerhalb von 60 Sekunden eine erste Einschätzung. Für eine detaillierte Bewertung mit Vor-Ort-Termin benötigen wir in der Regel 2-3 Werktage."
+        },
+        {
+          question: "Welche Unterlagen benötige ich für die Bewertung?",
+          answer: "Für eine präzise Bewertung benötigen wir die Wohnfläche, das Baujahr, den Zustand und die Ausstattung Ihrer Immobilie. Je mehr Details Sie bereitstellen, desto genauer ist die Bewertung."
+        },
+        {
+          question: "Wie hoch sind Ihre Provisionen?",
+          answer: "Unsere Provisionen sind marktüblich und richten sich nach dem Verkaufspreis. Wir besprechen alle Kosten transparent im Vorfeld, damit es keine Überraschungen gibt."
+        },
+        {
+          question: "Arbeiten Sie auch mit Investoren zusammen?",
+          answer: "Ja, wir haben umfangreiche Erfahrung mit Kapitalanlegern und Investoren. Wir unterstützen Sie bei der Suche nach renditestarken Immobilien und deroptimierung Ihres Portfolios."
+        }
+      ]} 
+    />
   </main>
   <Footer />
 </Layout>

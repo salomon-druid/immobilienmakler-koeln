@@ -1,8 +1,11 @@
 ---
 const { title } = Astro.props;
+// Get locale from URL parameter (for i18n routing) or default to 'de'
+const locale = Astro.params.lang ?? 'de';
+import SchemaOrg from '@/components/SchemaOrg.astro';
 ---
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang={locale} data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +15,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <SchemaOrg />
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-900 font-serif antialiased">
     <div class="min-h-screen flex flex-col">

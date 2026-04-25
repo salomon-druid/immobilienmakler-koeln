@@ -1,5 +1,33 @@
 ---
+import { t } from '@/i18n.js';
 const { title } = Astro.props;
+const locale = Astro.params.lang ?? 'de'; // fallback to default locale
+const otherLocale = locale === 'de' ? 'en' : 'de';
+
+function getSwitchLocalePathname() {
+  const pathname = Astro.url.pathname;
+  if (otherLocale === 'de') {
+    // Switching to default locale: remove the prefix if it exists
+    if (pathname.startsWith('/en/')) {
+      return pathname.slice(4); // remove "/en/"
+    }
+    if (pathname === '/en') {
+      return '/';
+    }
+    return pathname;
+  } else {
+    // Switching to en: add the "/en" prefix
+    if (pathname === '/' || pathname === '') {
+      return '/en';
+    }
+    // If already has a locale prefix (shouldn't happen when switching from de to en) but handle anyway
+    if (pathname.startsWith('/de/') || pathname.startsWith('/en/')) {
+      // Replace the current locale prefix with the other one
+      return pathname.replace(/^\/[a-z]{2}/, `/${otherLocale}`);
+    }
+    return `/${otherLocale}${pathname}`;
+  }
+}
 ---
 <header class="bg-white shadow-sm border-b">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -12,16 +40,50 @@ const { title } = Astro.props;
       </div>
       <div class="hidden md:md:block">
         <nav class="ml-10 flex items-baseline space-x-4">
-          <a href="/" class="{title === 'Startseite' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Startseite</a>
-          <a href="/bewertung" class="{title === 'Bewertung' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Bewertung</a>
-          <a href="/leistungen" class="{title === 'Leistungen' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Leistungen</a>
-          <a href="/ueber-uns" class="{title === 'Über uns' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Über uns</a>
-          <a href="/blog" class="{title === 'Blog' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-          <a href="/kontakt" class="{title === 'Kontakt' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">Kontakt</a>
+          <a href="/" 
+             class="{title === 'Startseite' || title === 'Home' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.home')}
+          </a>
+          <a href="/bewertung" 
+             class="{title === 'Bewertung' || title === 'Property Valuation' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.bewertung')}
+          </a>
+          <a href="/leistungen" 
+             class="{title === 'Leistungen' || title === 'Services' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.leistungen')}
+          </a>
+          <a href="/ueber-uns" 
+             class="{title === 'Über uns' || title === 'About Us' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.ueber-uns')}
+          </a>
+          <a href="/blog" 
+             class="{title === 'Blog' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.blog')}
+          </a>
+          <a href="/kontakt" 
+             class="{title === 'Kontakt' || title === 'Contact' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+            {t(locale, 'navigation.kontakt')}
+          </a>
         </nav>
       </div>
       <div class="hidden md:block">
-        <a href="/kontakt" class="px-3 py-2 rounded-md text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700">Kostenlose Bewertung</a>
+        <a href="/kontakt" class="px-3 py-2 rounded-md text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700">
+          {t(locale, 'hero.ctaPrimary')}
+        </a>
+      </div>
+      <div class="flex items-center space-x-2">
+        {/* Language switcher */}
+        <button 
+          on:click={() => {
+            window.location.href = getSwitchLocalePathname();
+          }}
+          class="flex items-center px-3 py-2 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200"
+        >
+          {locale.toUpperCase()}
+          <svg class="ml-2 h-4 w-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
       </div>
       <div class="-mr-2 flex items-center md:hidden">
         <!-- Mobile menu button -->

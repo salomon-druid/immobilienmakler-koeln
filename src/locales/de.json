@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "bewertung": "Immobilienbewertung",
+    "leistungen": "Leistungen",
+    "ueber-uns": "Über uns",
+    "blog": "Blog",
+    "kontakt": "Kontakt"
+  },
+  "hero": {
+    "title": "Ihr vertrauensvoller Immobilienmakler in Köln",
+    "subtitle": "Präzise Bewertungen, erfolgreiche Verkäufe und persönliche Beratung aus einer Hand",
+    "ctaPrimary": "Kostenlose Bewertung",
+    "ctaSecondary": "Unsere Leistungen"
+  },
+  "bewertung": {
+    "title": "Professionelle Immobilienbewertung in Köln",
+    "subtitle": "Erhalten Sie innerhalb von 60 Sekunden eine fundierte Marktpreis-Einschätzung für Ihre Immobilie. Unser KI-gestütztes Tool analysiert aktuelle Marktdaten, Vergleichsobjekte und lokale Besonderheiten.",
+    "formTitle": "Immobilienangaben",
+    "street": "Straße und Hausnummer",
+    "houseNumber": "Hausnummer (falls getrennt)",
+    "plz": "Postleitzahl",
+    "ort": "Ort",
+    "immotyp": "Immobilientyp",
+    "baujahr": "Baujahr",
+    "zimmer": "Zimmerzahl",
+    "schlafzimmer": "Schlafzimmer",
+    "flaeche": "Wohnfläche (m²)",
+    "grundstueck": "Grundstücksfläche (m²)",
+    "zustand": "Zustand",
+    "ausstattung": "Besonderheiten (mehrfach auswählbar)",
+    "balkon": "Balkon / Terrasse",
+    "garten": "Garten",
+    "keller": "Keller",
+    "aufzug": "Aufzug",
+    "einbaukueche": "Einbauküche",
+    "datenschutz": "Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.",
+    "submit": "Jetzt kostenlos bewerten lassen",
+    "loading": "Berechnung läuft...",
+    "resultTitle": "Ihre Bewertungsergebnisse",
+    "estimatedValue": "Schätzwert",
+    "confidence": "Sicherheit",
+    "range": "Preisspanne",
+    "comparableCount": "Vergleichsobjekte",
+    "marketTrend": "Markttrend",
+    "consultation": "Jetzt Beratung vereinbaren"
+  },
+  "leistungen": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Vollständiger Service rund um Ihre Immobilie - von der Bewertung über die Vermarktung bis zum erfolgreichen Abschluss.",
+    "serviceDetails": {
+      "title": "Unsere Kernleistungen",
+      "items": [
+        {
+          "title": "Immobilienbewertung",
+          "description": "Professionelle Marktpreisermittlung mit KI-Unterstützung für Wohn- und Gewerbeimmobilien in Köln und Umgebung."
+        },
+        {
+          "title": "Immobilienvermarktung",
+          "description": "Strategische Vermarktung mit professionellen Exposés, Zielgruppenansprache und Verhandlungsführung."
+        },
+        {
+          "title": "Finanzierungsberatung",
+          "description": "Unterstützung bei der Finanzierungsplanung und Vermittlung zu vertrauenswürdigen Finanzpartnern."
+        },
+        {
+          "title": "Rechtliche Begleitung",
+          "description": "Unterstützung bei allen rechtlichen Aspekten des Immobilienkaufs und -verkaufs."
+        }
+      ]
+    }
+  },
+  "ueber-uns": {
+    "title": "Über Uns",
+    "subtitle": "Wir sind ein junges, dynamisches Team von Immobilienexperten, das lokale Marktkenntnis mit technologischer Innovation verbindet."
+  },
+  "blog": {
+    "title": "Unser Blog",
+    "subtitle": "Aktuelle Nachrichten, Tipps und Einblicke zum Immobilienmarkt in Köln und Umgebung."
+  },
+  "kontakt": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir freuen uns auf Ihre Anfrage. Ob Sie eine Immobilie bewerten lassen möchten, Fragen zum Verkauf haben oder eine Beratung benötigen - wir sind für Sie da.",
+    "formTitle": "Nachricht senden",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefonnummer",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.",
+    "submit": "Nachricht senden",
+    "officeTitle": "Unser Büro",
+    "address": "Musterstraße 123\n50667 Köln",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "openingHours": "Öffnungszeiten",
+    "hours": "Mo-Fr: 9:00 - 18:00 Uhr\nSa: 10:00 - 14:00 Uhr"
+  },
+  "footer": {
+    "quickLinks": "Schnelle Links",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "copyright": "© {year} Immobilienmakler Köln. Alle Rechte vorbehalten."
+  }
+}

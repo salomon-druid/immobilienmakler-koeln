@@ -4,16 +4,17 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import ValuationForm from '@/components/ValuationForm.astro';
 import ValuationResult from '@/components/ValuationResult.astro';
+import { t } from '@/i18n.js';
 ---
-<Layout title="Immobilienbewertung">
+<Layout title={t(Astro.params.lang ?? 'de', 'bewertung.title')}>
   <Header activePage="bewertung" />
   <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
     <section class="mb-12">
       <h1 class="text-3xl font-bold text-gray-900 mb-4">
-        Professionelle Immobilienbewertung in Köln
+        {t(Astro.params.lang ?? 'de', 'bewertung.title')}
       </h1>
       <p class="text-lg text-gray-600 mb-8">
-        Erhalten Sie innerhalb von 60 Sekunden eine fundierte Marktpreis-Einschätzung für Ihre Immobilie. Unser KI-gestütztes Tool analysiert aktuelle Marktdaten, Vergleichsobjekte und lokale Besonderheiten.
+        {t(Astro.params.lang ?? 'de', 'bewertung.subtitle')}
       </p>
       <div class="bg-white rounded-xl shadow-md p-6">
         <ValuationForm />
@@ -21,7 +22,7 @@ import ValuationResult from '@/components/ValuationResult.astro';
     </section>
     <section class="hidden" id="result-section">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">
-        Ihre Bewertungsergebnisse
+        {t(Astro.params.lang ?? 'de', 'bewertung.resultTitle')}
       </p>
       <div class="bg-white rounded-xl shadow-md p-6">
         <ValuationResult />

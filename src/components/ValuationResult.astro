@@ -2,14 +2,21 @@
 // This component would normally receive data from a backend or state management
 // For this static demo, we'll show placeholder data or expect props
 export interface Props {
-  estimatedValue: number;
-  confidence: number; // 0-100
-  rangeLow: number;
-  rangeHigh: number;
-  comparableCount: number;
-  marketTrend: string;
+  estimatedValue?: number;
+  confidence?: number; // 0-100
+  rangeLow?: number;
+  rangeHigh?: number;
+  comparableCount?: number;
+  marketTrend?: string;
 }
-const { estimatedValue, confidence, rangeLow, rangeHigh, comparableCount, marketTrend } = Astro.props;
+const {
+  estimatedValue = 500000,
+  confidence = 85,
+  rangeLow = 450000,
+  rangeHigh = 550000,
+  comparableCount = 12,
+  marketTrend = "steigend"
+} = Astro.props;
 ---
 <section class="bg-white rounded-xl shadow-xl p-8">
   <div class="space-y-6">
