@@ -9,7 +9,6 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   site: 'https://immobilien-koeln.example.com',
   integrations: [tailwind()],
-  output: 'static',
   i18n: {
     defaultLocale: 'de',
     locales: ['de', 'en'],
