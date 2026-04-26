@@ -2,7 +2,7 @@
 const { title } = Astro.props;
 // Get locale from URL parameter (for i18n routing) or default to 'de'
 const locale = Astro.params.lang ?? 'de';
-import SchemaOrg from '@/components/SchemaOrg.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
 ---
 <!DOCTYPE html>
 <html lang={locale} data-theme="light">
