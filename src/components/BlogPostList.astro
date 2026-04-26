@@ -1,0 +1,42 @@
+---
+// This component would typically fetch blog posts from a content collection or API.
+// For now, we'll render a placeholder or static example posts.
+---
+<section class="mb-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-8">Aktuelle Blogbeiträge</p>
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      {
+        title: "Immobilienmarkt Köln Q1 2026: Trends und Prognosen",
+        excerpt: "Eine Analyse der aktuellen Entwicklungen auf dem Kölner Immobilienmarkt und was Käufer und Verkäufer erwarten können.",
+        date: "15. März 2026",
+        image: "/placeholder-blog1.jpg",
+        alt: "Köln Skyline"
+      },
+      {
+        title: "Tipps für die erfolgreiche Immobilienbewertung",
+        excerpt: "Wie Sie Ihre Immobilie optimal für die Bewertung vorbereiten und den besten Preis erzielen.",
+        date: "08. März 2026",
+        image: "/placeholder-blog2.jpg",
+        alt: "Immobilienbewertung"
+      },
+      {
+        title: "Nachhaltiges Bauen in Köln: Förderungen und Möglichkeiten",
+        excerpt: "Ein Überblick über staatliche Förderprogramme für energieeffizientes Bauen und Sanieren in Köln.",
+        date: "01. März 2026",
+        image: "/placeholder-blog3.jpg",
+        alt: "Nachhaltiges Bauen"
+      }
+    ].map((post) => (
+      <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+        <img src={post.image} alt={post.alt} class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
+        <p class="text-gray-600 mb-4">{post.excerpt}</p>
+        <div class="flex items-center justify-between text-sm text-gray-500">
+          <span>{post.date}</span>
+          <a href="/blog" class="text-indigo-600 hover:underline">Weiterlesen →</a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
