@@ -38,9 +38,9 @@ function getSwitchLocalePathname() {
         </a>
         <span class="ml-4 text-xs text-gray-500">TEST-HEADER</span>
       </div>
-      <div class="hidden md:block">
+      <div class="desktop-nav">
         <nav id="mobile-menu" class="ml-10 flex items-baseline space-x-4">
-          <a href="/" 
+          <a href="/"
              class="{title === 'Startseite' || title === 'Home' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.home')}
           </a>
@@ -66,24 +66,26 @@ function getSwitchLocalePathname() {
           </a>
         </nav>
       </div>
-      <div class="hidden md:block">
+      <div class="cta-button">
         <a href="/kontakt" class="px-3 py-2 rounded-md text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700">
           {t(locale, 'hero.ctaPrimary')}
         </a>
       </div>
-      <div class="flex items-center space-x-2">
-        {/* Language switcher */}
-        <button 
-          on:click={() => {
-            window.location.href = getSwitchLocalePathname();
-          }}
-          class="flex items-center px-3 py-2 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200"
-        >
-          {locale.toUpperCase()}
-          <svg class="ml-2 h-4 w-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-          </svg>
-        </button>
+      <div class="language-switcher">
+        <div class="flex items-center space-x-2">
+          {/* Language switcher */}
+          <button
+            on:click={() => {
+              window.location.href = getSwitchLocalePathname();
+            }}
+            class="flex items-center px-3 py-2 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200"
+          >
+            {locale.toUpperCase()}
+            <svg class="ml-2 h-4 w-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="-mr-2 flex items-center md:hidden">
         <!-- Mobile menu button -->
@@ -99,10 +101,25 @@ function getSwitchLocalePathname() {
   </div>
 </header>
 <style>
-  #mobile-menu {
+  .desktop-nav,
+  .cta-button,
+  .language-switcher {
     display: none;
   }
-  .menu-open #mobile-menu {
+  .menu-open .desktop-nav,
+  .menu-open .language-switcher {
+    display: flex !important;
+  }
+  .menu-open .cta-button {
     display: block !important;
+  }
+  @media (min-width: 768px) {
+    .desktop-nav,
+    .language-switcher {
+      display: flex !important;
+    }
+    .cta-button {
+      display: block !important;
+    }
   }
 </style>
