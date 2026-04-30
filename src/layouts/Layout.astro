@@ -14,20 +14,19 @@ import SchemaOrg from '../components/SchemaOrg.astro';
     <link rel="icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" />
     <SchemaOrg />
   </head>
-  <body class="min-h-screen bg-gray-50 text-gray-900 font-serif antialiased">
-    <div class="min-h-screen flex flex-col">
-      <header>
-        <slot name="header" />
-      </header>
-      <main class="flex-1">
-        <slot />
-      </main>
-      <footer>
-        <slot name="footer" />
-      </footer>
-    </div>
+  <body class="min-h-screen flex flex-col">
+    <header>
+      <slot name="header" />
+    </header>
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer>
+      <slot name="footer" />
+    </footer>
   </body>
 </html>

@@ -29,45 +29,45 @@ function getSwitchLocalePathname() {
   }
 }
 ---
-<header id="site-header" class="bg-white shadow-sm border-b">
+<header id="site-header" class="bg-[var(--color-bg)] shadow-sm border-b border-[var(--color-border)]">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex flex-wrap items-center justify-between py-4">
       <div class="flex-shrink-0 flex items-center">
         <a href="/" class="flex items-center">
           <img src="/logo.png" alt="Immobilien Köln Logo" class="h-40 w-auto" />
         </a>
-        <span class="ml-4 text-xs text-gray-500">TEST-HEADER</span>
+        <span class="ml-4 text-xs text-[var(--color-muted-light)]">TEST-HEADER</span>
       </div>
       <div class="desktop-nav">
         <nav id="mobile-menu" class="ml-10 flex items-baseline space-x-4">
           <a href="/"
-             class="{title === 'Startseite' || title === 'Home' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Startseite' || title === 'Home' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.home')}
           </a>
           <a href="/bewertung" 
-             class="{title === 'Bewertung' || title === 'Property Valuation' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Bewertung' || title === 'Property Valuation' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.bewertung')}
           </a>
           <a href="/leistungen" 
-             class="{title === 'Leistungen' || title === 'Services' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Leistungen' || title === 'Services' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.leistungen')}
           </a>
           <a href="/ueber-uns" 
-             class="{title === 'Über uns' || title === 'About Us' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Über uns' || title === 'About Us' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.ueber-uns')}
           </a>
           <a href="/blog" 
-             class="{title === 'Blog' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Blog' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.blog')}
           </a>
           <a href="/kontakt" 
-             class="{title === 'Kontakt' || title === 'Contact' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500 hover:text-gray-700'} px-3 py-2 rounded-md text-sm font-medium">
+             class="{title === 'Kontakt' || title === 'Contact' ? 'text-[var(--color-primary)] border-b-2 border-[var(--color-primary)]' : 'text-[var(--color-muted-light)] hover:text-[var(--color-primary)]'} px-3 py-2 rounded-md text-sm font-medium">
             {t(locale, 'navigation.kontakt')}
           </a>
         </nav>
       </div>
       <div class="cta-button">
-        <a href="/kontakt" class="px-3 py-2 rounded-md text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700">
+        <a href="/kontakt" class="px-3 py-2 rounded-md text-sm font-medium bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-light)]">
           {t(locale, 'hero.ctaPrimary')}
         </a>
       </div>
@@ -78,7 +78,7 @@ function getSwitchLocalePathname() {
             on:click={() => {
               window.location.href = getSwitchLocalePathname();
             }}
-            class="flex items-center px-3 py-2 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200"
+            class="flex items-center px-3 py-2 rounded-md text-sm font-medium bg-[var(--color-muted-lighter)] hover:bg-[var(--color-muted-light)]"
           >
             {locale.toUpperCase()}
             <svg class="ml-2 h-4 w-4" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ function getSwitchLocalePathname() {
           on:click={() => {
             document.getElementById('site-header').classList.toggle('menu-open');
           }}
-          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 inactive:text-gray-400">
+          class="inline-flex items-center justify-center p-2 rounded-md text-[var(--color-muted-light)] hover:text-[var(--color-text)] hover:bg-[var(--color-muted-lighter)] inactive:text-[var(--color-muted-light)]">
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
